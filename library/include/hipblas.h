@@ -76,7 +76,15 @@ enum hipblasDatatype_t
     HIPBLAS_R_64F = 152,
     HIPBLAS_C_16F = 153,
     HIPBLAS_C_32F = 154,
-    HIPBLAS_C_64F = 155
+    HIPBLAS_C_64F = 155,
+    HIPBLAS_R_8I = 156,    //added for 8I
+    HIPBLAS_C_8I = 157,    //added for c_8I
+    HIPBLAS_R_8U = 158,    //added for r_8u
+    HIPBLAS_C_8U = 159,    //added for c_8u
+    HIPBLAS_R_32I= 160,    //added for r_32I
+    HIPBLAS_C_32I= 161,    //added for c_32I
+    HIPBLAS_R_32U= 162,    //added for R_32U
+    HIPBLAS_C_32U= 163     //added for C_32U
 };
 
 enum hipblasGemmAlgo_t

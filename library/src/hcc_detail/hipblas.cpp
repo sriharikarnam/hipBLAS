@@ -177,6 +177,30 @@ rocblas_datatype HIPDatatypeToRocblasDatatype(hipblasDatatype_t type)
     case HIPBLAS_C_64F:
         return rocblas_datatype_f64_c;
 
+    case HIPBLAS_R_8I:
+        return rocblas_datatype_i8_r;
+
+    case HIPBLAS_R_8U:
+        return rocblas_datatype_u8_r;
+
+    case HIPBLAS_R_32I:
+        return rocblas_datatype_i32_r;
+
+    case HIPBLAS_R_32U:
+        return rocblas_datatype_u32_r;
+
+    case HIPBLAS_C_8I:
+        return rocblas_datatype_i8_c;
+
+    case HIPBLAS_C_8U:
+        return rocblas_datatype_u8_c;
+
+    case HIPBLAS_C_32I:
+        return rocblas_datatype_i32_c;
+
+    case HIPBLAS_C_32U:
+        return rocblas_datatype_u32_c;
+
     default:
         throw "Non existant DataType";
     }
@@ -203,6 +227,30 @@ hipblasDatatype_t RocblasDatatypeToHIPDatatype(rocblas_datatype type)
 
     case rocblas_datatype_f64_c:
         return HIPBLAS_C_64F;
+
+    case rocblas_datatype_i8_r:
+        return HIPBLAS_R_8I;
+
+    case rocblas_datatype_u8_r:
+        return HIPBLAS_R_8U;
+
+    case rocblas_datatype_i32_r:
+        return HIPBLAS_R_32I;
+
+    case rocblas_datatype_u32_r:
+        return HIPBLAS_R_32U;
+
+    case rocblas_datatype_i8_c:
+        return HIPBLAS_C_8I;
+
+    case rocblas_datatype_u8_c:
+        return HIPBLAS_C_8U;
+
+    case rocblas_datatype_i32_c:
+        return HIPBLAS_C_32I;
+
+    case rocblas_datatype_u32_c:
+        return HIPBLAS_C_32U;
 
     default:
         throw "Non existant DataType";
